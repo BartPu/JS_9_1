@@ -1,35 +1,14 @@
-var a = prompt('Podaj długość podstawy "a"'),
-    h = prompt('Podaj wysokość trójkąta "h"'),
-    triangleArea = (a * h) / 2,
-
     function getTriangleArea(a, h) {
-        if (a > 0) || (h > 0) {
-            alert('Pole trójkąta wynosi: ' + triangleArea)
-            console.log(triangleArea)
+        if ((a > 0) && (h > 0)) {
+            alert(a * h / 2);
+            return (a * h / 2)
         } else {
-            alert('Nieprawidłowe dane.')
+            alert('Nieprawidłowe dane.');
+            return ('Nieprawidłowe dane.')
         }
     };
-
-
-
-
-value = (a * a) + (2 * a * b) - (b * b);
-
-alert('The result of (a * a) + (2 * a * b) - (b * b) operation is: ' + value);
-console.log(value);
-
-if (value < 0) {
-    alert('Wynik jest ujemny');
-    console.log('Wynik jest ujemny');
-} else if (value > 0) {
-    alert('Wynik jest dodatni');
-    console.log('Wynik jest dodatni');
-} else {
-    alert('Wynik równy zero');
-    console.log('Wynik równy zero');
-};
-
-
-alert('Triangle field with base a: ' + a + ' and height h: ' + h + ' is equal to: ' + triangleArea);
-console.log('Triangle field with base a: ' + a + ' and height h: ' + h + ' is equal to: ' + triangleArea);
+    console.log(getTriangleArea(10, 6));
+    var triangle1Area = getTriangleArea(10, 15),
+        triangle2Area = getTriangleArea(4, 0),
+        triangle3Area = getTriangleArea(1, 3);
+    console.log([triangle1Area, triangle2Area, triangle3Area])
